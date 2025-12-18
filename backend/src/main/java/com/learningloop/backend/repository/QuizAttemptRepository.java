@@ -1,0 +1,11 @@
+package com.learningloop.backend.repository;
+
+import com.learningloop.backend.entity.QuizAttempt;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface QuizAttemptRepository extends JpaRepository<QuizAttempt, Long> {
+
+    List<QuizAttempt> findByUserEmail(String userEmail);
+}
+
